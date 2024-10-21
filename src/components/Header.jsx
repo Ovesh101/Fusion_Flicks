@@ -6,7 +6,7 @@ const Header = () => {
   const location = useLocation(); // Get the current location
 
   return (
-    <header className="flex   justify-between items-center px-[30px] md:px-[100px] py-6 bg-dark-gray text-light-gray">
+    <header className="flex bg-dark-gray  justify-between items-center px-[30px] md:px-[100px] py-6 text-light-gray">
       {/* Logo on the left */}
       <div className="flex items-center">
         <img src="/path_to_your_logo.svg" alt="Logo" className="h-8 mr-2" />{" "}

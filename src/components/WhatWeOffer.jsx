@@ -36,15 +36,15 @@ const projectsData = [
 
 const WhatWeOffer = () => {
   return (
-    <section className="px-4 md:px-[100px] py-12 bg-dark-charcoal text-light-gray">
+    <section className="px-4 md:px-[100px] py-10 bg-dark-charcoal text-light-gray">
       {/* Main Title */}
       <h2 className="text-[30px] text-golden-brown  font-semibold text-center ">
         What We Offer
       </h2>
 
       {/* Subtitle and Paragraphs */}
-      <div className="text-center text-light-gray w-[60%] mx-auto mb-12">
-        <h3 className="text-[50px] font-medium mb-4">Comprehensive Film and Video Production</h3>
+      <div className="text-center text-light-gray w-[80%] mx-auto mb-12">
+        <h3 className="text-[50px] font-[500] mb-4">Comprehensive Film and Video Production</h3>
         <p className="text-[20px]">
          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quas quo sapiente dolorum ipsum cumque. Commodi nemo mollitia et delectus!
         </p>

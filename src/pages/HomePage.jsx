@@ -1,6 +1,10 @@
+import Clients from "../components/Clients";
+import OurTeam from "../components/OurTeam";
 import Projects from "../components/Projects";
+import Testimonials from "../components/Testimonials";
 import WhatWeOffer from "../components/WhatWeOffer";
 import WhoWeAre from "../components/WhoWeAre";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 
 
@@ -43,6 +47,10 @@ const HomePage = () => {
       <Projects />
       <WhoWeAre />
       <WhatWeOffer />
+      <WhyChooseUs />
+      <OurTeam />
+      <Clients />
+      <Testimonials />
     </div>
     
   );

@@ -10,5 +10,25 @@ body {
 }
 
 
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 250ms ease, transform 450ms ease;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
 
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scrollbar-width: none;  /* For Firefox */
+}
 
