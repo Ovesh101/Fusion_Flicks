@@ -2,9 +2,9 @@ import React , {lazy , Suspense} from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-const Portfolio = lazy(()=> import("./components/Portfolio"))
+import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
+const Portfolio = lazy(()=> import("./pages/Portfolio"))
 import Spinner from "./components/Spinner";
 import HomePage from "./pages/HomePage";
 

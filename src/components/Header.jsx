@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import { SideBarLinks } from "../utils/constant";
+import ContactUsModal from "./ContactUsModal";
 
 const Header = () => {
   const location = useLocation(); // Get the current location
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(true);
+  };
 
   return (
     <header className="flex bg-dark-gray  justify-between items-center px-[30px] md:px-[100px] py-6 text-light-gray">
@@ -37,11 +43,13 @@ const Header = () => {
         <div className="flex items-center">
         
 
-          <button className=" font-[500] bg-golden-brown text-[18px] text-light-gray py-[10px] px-8 rounded-[20px] transition-colors duration-300 hover:bg-light-gray hover:text-golden-brown">
+          <button onClick={handleClick} className=" font-[500] bg-golden-brown text-[18px] text-light-gray py-[10px] px-8 rounded-[20px] transition-colors duration-300 hover:bg-light-gray hover:text-golden-brown">
           Get Quote
           </button>
         </div>
       </div>
+
+      <ContactUsModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 };

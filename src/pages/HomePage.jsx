@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Clients from "../components/Clients";
+import ContactUsModal from "../components/ContactUsModal";
 import OurTeam from "../components/OurTeam";
 import Projects from "../components/Projects";
 import Testimonials from "../components/Testimonials";
@@ -9,6 +11,14 @@ import WhyChooseUs from "../components/WhyChooseUs";
 
 
 const HomePage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const handleClick = ()=>{
+
+    setIsOpen(true)
+    
+  }
   return (
 
 
@@ -38,11 +48,13 @@ const HomePage = () => {
             veritatis sed pariatur facilis blanditiis consequatur autem maiores
             deleniti laboriosam. Ipsam, asperiores!
           </p>
-          <button className="mt-5 font-[500] hover:bg-golden-brown text-[18px] hover:text-light-gray py-[10px] px-8  transition-colors duration-300 bg-transparent border-dashed border-light-gray border-[1px] text-golden-brown">
+          <button onClick={handleClick} className="mt-5 font-[500] hover:bg-golden-brown text-[18px] hover:text-light-gray py-[10px] px-8  transition-colors duration-300 bg-transparent border-dashed border-light-gray border-[1px] text-golden-brown">
             Get Quote
           </button>
         </div>
       </div>
+
+      <ContactUsModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <Projects />
       <WhoWeAre />
@@ -51,6 +63,7 @@ const HomePage = () => {
       <OurTeam />
       <Clients />
       <Testimonials />
+
     </div>
     
   );

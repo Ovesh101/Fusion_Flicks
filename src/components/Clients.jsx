@@ -20,7 +20,7 @@ const Clients = () => {
           Work alongside 1500+ innovative partners
         </div>
         {/* Marquee Component */}
-        <Marquee speed={200} pauseOnHover>
+        <Marquee speed={100} pauseOnHover>
           {clients.map((client) => (
             <div
               key={client.id}
