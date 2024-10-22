@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex bg-dark-gray  justify-between items-center px-[30px] md:px-[100px] py-6 text-light-gray">
+    <header className="flex bg-transparent z-10 absolute top-0 left-0 right-0  justify-between items-center px-[30px] md:px-[100px] py-6 text-light-gray">
       {/* Logo on the left */}
       <div className="flex items-center">
         <img src="/path_to_your_logo.svg" alt="Logo" className="h-8 mr-2" />{" "}
@@ -21,7 +21,7 @@ const Header = () => {
       </div>
 
       {/* Navigation links on the right */}
-      <div className="flex  gap-10">
+      <div className="flex  gap-8">
         <nav className="md:flex hidden space-x-2">
           {SideBarLinks.map((link) => {
             const isActive = location.pathname === link.route; // Check if the link is active
@@ -29,7 +29,7 @@ const Header = () => {
               <Link
                 key={link.label}
                 to={link.route}
-                className={`flex items-center font-[500] py-[10px] text-[18px] px-8 rounded-[20px] ${
+                className={`flex cursor-pointer items-center font-[500] py-[10px] text-[18px] px-8 rounded-[20px] ${
                   isActive ? "bg-golden-brown" : "text-light-gray" // Apply brown color if active
                 }`}
               >

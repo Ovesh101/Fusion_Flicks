@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Play } from "lucide-react";
+import { Play , X } from "lucide-react";
+
 import FadeInSection from "./FadeInSection";
 
 // Dummy project data with YouTube video links
@@ -91,22 +92,22 @@ const Projects = () => {
 
               {/* Play Icon in Top Left */}
               <div
-                className="absolute animate-sound-wave rounded-full bg-golden-brown p-4 top-4 left-4 cursor-pointer"
+                className="absolute animate-sound-wave transition-all duration-300 ease-in-out rounded-full hover:text-golden-brown bg-golden-brown hover:bg-light-gray p-4 top-4 left-4 cursor-pointer"
                 onClick={() => handlePlayClick(project.videoUrl)} // Play video on click
               >
-                <Play className="h-6 w-6 text-white" />
+                <Play className="h-6 w-6 " />
               </div>
 
               {/* Title at the Bottom of the Card */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 pt-8 bg-transparent transition-all duration-300 hover:bg-dark-gray group flex flex-col justify-end">
-                <h3 className="text-lg font-semibold text-white transition duration-300 group-hover:translate-y-[-20px]">
+              <div className="absolute bottom-0 left-0 right-0 p-4 pt-8 bg-transparent transition-all duration-500 ease-in-out hover:bg-dark-gray group flex flex-col justify-end">
+                <h3 className="text-lg font-semibold transition-all duration-300 ease-in-out  text-white">
                   {project.title}
                 </h3>
-                <hr className="border-golden-brown mt-1 border-2 w-[100px] transition duration-300 group-hover:translate-y-[-20px]" />
+                <hr className="border-golden-brown mt-1 transition-all duration-300 ease-in-out  border-2 w-[100px] " />
 
                 {/* Description (hidden by default) */}
                 <p
-                  className={`mt-2 text-gray-300 transition-all duration-300 overflow-hidden max-h-0 group-hover:max-h-[300px]`}
+                  className={`mt-2 text-gray-300  overflow-hidden transition-all  duration-300 ease-in-out  max-h-0  group-hover:max-h-[300px]`}
                 >
                   {project.description}
                 </p>
@@ -133,10 +134,10 @@ const Projects = () => {
               {/* Close Button */}
             </div>
             <button
-              className="absolute top-2 right-2 bg-white text-black px-4 py-2 rounded"
+              className="absolute top-2 right-2  text-golden-brown px-4 py-2 rounded"
               onClick={() => setPlayingVideo(null)}
             >
-              Close
+              <X />
             </button>
           </div>
         )}

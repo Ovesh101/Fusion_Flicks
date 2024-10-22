@@ -14,7 +14,7 @@ import HomePage from "./pages/HomePage";
 const Layout = () => (
   <>
   
-    <Header />
+ 
 
     <Outlet />
 
