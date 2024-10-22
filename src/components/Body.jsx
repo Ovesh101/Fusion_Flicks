@@ -34,7 +34,7 @@ const Body = () => {
   return (
     <div className="px-[100px] py-10 bg-dark-charcoal">
       <h1 className="text-[40px] text-center font-[500] text-golden-brown mb-6">Categories</h1>
-      <div className="flex justify-between flex-wrap items-center gap-8 mb-6">
+      <div className="flex justify-between  flex-wrap items-center gap-8 mb-6">
         {categories.map(category => (
           <button
             key={category.value}

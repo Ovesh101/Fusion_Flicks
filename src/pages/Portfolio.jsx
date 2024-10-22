@@ -2,6 +2,9 @@ import { useState } from "react";
 import ContactUsModal from "../components/ContactUsModal";
 import Header from "../components/Header";
 import Body from "../components/Body";
+import OurTeam from "../components/OurTeam";
+import WhatWeOffer from "../components/WhatWeOffer"
+import Clients from "../components/Clients";
 
 const Portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +45,9 @@ const Portfolio = () => {
       </div>
 
       <Body />
+      <OurTeam />
+      <WhatWeOffer />
+      <Clients />
     </>
   );
 };

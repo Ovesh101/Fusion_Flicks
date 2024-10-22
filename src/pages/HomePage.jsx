@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Clients from "../components/Clients";
 import ContactUsModal from "../components/ContactUsModal";
 import OurTeam from "../components/OurTeam";
@@ -11,6 +11,15 @@ import Header from "../components/Header";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 0); // No delay; can adjust for timing if needed
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
 
   const handleClick = () => {
     setIsOpen(true);
@@ -39,8 +48,8 @@ const HomePage = () => {
           </div>
 
           <p className=" md:text-[18px] ">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae enim
-            maiores porro, facere culpa aliquid provident! Impedit recusandae
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+             <span  className={`metaball ${loaded ? "loaded" : ""}`} >Vitae enim maiores porro, facere culpa aliquid provident! </span>
             veritatis sed pariatur facilis blanditiis consequatur autem maiores
             deleniti laboriosam. Ipsam, asperiores!
           </p>

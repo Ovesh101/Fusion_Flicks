@@ -32,3 +32,27 @@ body {
   scrollbar-width: none;  /* For Firefox */
 }
 
+
+.metaball {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.metaball::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  height: 100%;
+  width: 0%; /* Start with no width */
+  background-color: #C28E4A; /* Background color */
+  z-index: -1; /* Ensure it's behind the text */
+  transition: width 3s ease; /* Smooth transition on hover */
+  border-radius: 4px;
+}
+
+.metaball.loaded::before {
+  width: calc(100% + 4px); /* Fully cover the text after page load */
+}
+

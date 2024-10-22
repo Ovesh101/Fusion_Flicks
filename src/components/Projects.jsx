@@ -87,7 +87,7 @@ const Projects = () => {
                   project.videoUrl
                 )}/hqdefault.jpg`}
                 alt={project.title}
-                className="  object-contain rounded-t-lg"
+                className="  object-cover w-full h-[235px] rounded-t-lg"
               />
 
               {/* Play Icon in Top Left */}
