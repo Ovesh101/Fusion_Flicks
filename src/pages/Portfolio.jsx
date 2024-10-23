@@ -5,6 +5,7 @@ import Body from "../components/Body";
 import OurTeam from "../components/OurTeam";
 import WhatWeOffer from "../components/WhatWeOffer"
 import Clients from "../components/Clients";
+import WhyChooseUs from "../components/WhyChooseUs"
 
 const Portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Portfolio = () => {
         style={{ backgroundImage: "url('/Images/background.jpg')" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-dark-gray opacity-70"></div>
 
         {/* Header on top */}
         <Header />
@@ -47,6 +48,7 @@ const Portfolio = () => {
       <Body />
       <OurTeam />
       <WhatWeOffer />
+      <WhyChooseUs />
       <Clients />
     </>
   );

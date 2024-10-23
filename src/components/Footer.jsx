@@ -1,10 +1,18 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Facebook,  Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+
+
 
 const Footer = () => {
   return (
-    <footer className="bg-cover bg-dark-charcoal bg-center text-light-gray py-10" style={{ backgroundImage: 'url(/Images/video.png)' }}>
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-cover px-[100px] bg-dark-charcoal bg-center text-light-gray py-10" style={{ backgroundImage: 'url(/Images/background.jpg)' }}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-dark-gray opacity-70"></div>
+
+      {/* Content */}
+      <div className="relative container mx-auto px-4">
         {/* First Row: Logo and Social Media Icons */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center">
@@ -12,11 +20,15 @@ const Footer = () => {
             <span className="text-2xl font-bold">Brand Name</span>
           </div>
           <div className="flex space-x-4">
-            <a href="#" aria-label="Facebook"><Facebook className="text-xl hover:text-golden-brown" /></a>
-            <a href="#" aria-label="Twitter"><Twitter className="text-xl hover:text-golden-brown" /></a>
-  
+            <a href="#" aria-label="Facebook">
+              <Facebook className="text-xl hover:text-golden-brown" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <Twitter className="text-xl hover:text-golden-brown" />
+            </a>
           </div>
         </div>
+
         <hr className="border-t border-gray-600 mb-6" />
 
         {/* Second Row: Quick Links, Our Services, Contact Info */}
@@ -24,9 +36,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-2">Quick Links</h3>
             <ul className="space-y-1">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
+              <li><Link to="/" className="hover:underline">Home</Link></li>
+              <li><Link  to="/about" className="hover:underline">About</Link></li>
+              <li><Link to="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -43,6 +55,7 @@ const Footer = () => {
             <p>Phone: (123) 456-7890</p>
           </div>
         </div>
+
         <hr className="border-t border-gray-600 mb-6" />
 
         {/* Third Row: Copyright and Policy Links */}

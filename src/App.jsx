@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 const Portfolio = lazy(()=> import("./pages/Portfolio"))
 import Spinner from "./components/Spinner";
 import HomePage from "./pages/HomePage";
+import ScrollToTopButton from "./components/ScrollToTop";
 
 
 
@@ -17,8 +18,9 @@ const Layout = () => (
  
 
     <Outlet />
-
+  
     <Footer />
+    <ScrollToTopButton />
   </>
 );
 

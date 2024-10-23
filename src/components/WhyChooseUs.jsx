@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Column 2 (Content) */}
-      <div className="pt-20" >
+      <div className="pt-14" >
         {/* Title */}
         <h2 className="text-golden-brown text-[30px] font-semibold mb-4">Why Choose Us</h2>
         

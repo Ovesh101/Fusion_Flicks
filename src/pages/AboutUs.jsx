@@ -22,7 +22,7 @@ const AboutUs = () => {
         style={{ backgroundImage: "url('/Images/background.jpg')" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-dark-gray opacity-70"></div>
 
         {/* Header on top */}
         <Header />

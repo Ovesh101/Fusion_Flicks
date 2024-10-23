@@ -4,10 +4,7 @@ const clients = [
   { id: 1, logo: "/Images/light.png", alt: "Client Logo 1" },
   { id: 2, logo: "/Images/light.png", alt: "Client Logo 2" },
   { id: 3, logo: "/Images/light.png", alt: "Client Logo 3" },
-  { id: 4, logo: "/Images/light.png", alt: "Client Logo 4" },
-  { id: 5, logo: "/Images/light.png", alt: "Client Logo 5" },
-  { id: 6, logo: "/Images/light.png", alt: "Client Logo 6" },
-  { id: 7, logo: "/Images/light.png", alt: "Client Logo 7" },
+
 ];
 
 const Clients = () => {
@@ -24,7 +21,7 @@ const Clients = () => {
           {clients.map((client) => (
             <div
               key={client.id}
-              className="flex justify-center items-center mx-6"
+              className="flex justify-center px-10 items-center mx-6"
             >
               <img
                 src={client.logo}

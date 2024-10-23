@@ -38,7 +38,7 @@ const HomePage = () => {
           loop
         />
         {/* Overlay for shading effect */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-dark-gray opacity-70"></div>
       
 
         {/* Content on the left side of the video */}
