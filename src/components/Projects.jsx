@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Play , X } from "lucide-react";
+import { Play, X } from "lucide-react";
 
 import FadeInSection from "./FadeInSection";
 
@@ -58,36 +58,37 @@ const Projects = () => {
   return (
     <section className="px-4 md:px-[100px] py-12 bg-dark-charcoal text-light-gray ">
       {/* Main Title */}
-      <FadeInSection delay = {150} >
-        <h2 className="text-[30px] text-golden-brown md:text-5xl font-semibold text-center mb-6">
-          Projects
-        </h2>
 
-        {/* Subtitle and Paragraphs */}
-        <div className="text-center text-light-gray max-w-2xl mx-auto mb-12">
-          <h3 className="text-[50px] font-medium mb-4">
-            Explore Our Latest Work
-          </h3>
-          <p className="text-[20px]">
-            Take a look at some of our most notable projects below, where
-            creativity meets functionality.
-          </p>
-        </div>
+      <h2 className="text-[30px] text-golden-brown md:text-5xl font-semibold text-center mb-6">
+        Projects
+      </h2>
 
-        {/* Cards Section */}
+      {/* Subtitle and Paragraphs */}
+      <div className="text-center text-light-gray max-w-2xl mx-auto mb-12">
+        <h3 className="text-[50px] font-medium mb-4">
+          Explore Our Latest Work
+        </h3>
+        <p className="text-[20px]">
+          Take a look at some of our most notable projects below, where
+          creativity meets functionality.
+        </p>
+      </div>
+
+      {/* Cards Section */}
+      <FadeInSection delay={150}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="relative  rounded-lg shadow-lg transition duration-300"
+              className="relative   rounded-lg shadow-lg transition duration-300"
             >
               {/* YouTube Thumbnail as Card Background */}
               <img
-                src={`https://img.youtube.com/vi/${getYouTubeThumbnail(
+                src={`https://i.ytimg.com/vi/${getYouTubeThumbnail(
                   project.videoUrl
-                )}/hqdefault.jpg`}
+                )}/hq720.jpg`}
                 alt={project.title}
-                className="  object-cover w-full h-[235px] rounded-t-lg"
+                className="object-contain w-full rounded-t-lg"
               />
 
               {/* Play Icon in Top Left */}
@@ -115,33 +116,33 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-        {/* Video Player Modal */}
-        {playingVideo && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
-            <div className="relative w-[80vw] h-[80vh]">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${getYouTubeThumbnail(
-                  playingVideo
-                )}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded YouTube Video"
-              ></iframe>
-
-              {/* Close Button */}
-            </div>
-            <button
-              className="absolute top-2 right-2  text-golden-brown px-4 py-2 rounded"
-              onClick={() => setPlayingVideo(null)}
-            >
-              <X />
-            </button>
-          </div>
-        )}
       </FadeInSection>
+
+      {/* Video Player Modal */}
+      {playingVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
+          <div className="relative w-[80vw] h-[80vh]">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${getYouTubeThumbnail(
+                playingVideo
+              )}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded YouTube Video"
+            ></iframe>
+
+            {/* Close Button */}
+          </div>
+          <button
+            className="absolute top-2 right-2  text-golden-brown px-4 py-2 rounded"
+            onClick={() => setPlayingVideo(null)}
+          >
+            <X />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

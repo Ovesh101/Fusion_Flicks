@@ -20,11 +20,11 @@ const Category = ({ cards, onPlayClick }) => {
         >
           {/* YouTube Thumbnail as Card Background */}
           <img
-            src={`https://img.youtube.com/vi/${getYouTubeThumbnail(
+            src={`https://i.ytimg.com/vi/${getYouTubeThumbnail(
               project.videoUrl
-            )}/hqdefault.jpg`}
+            )}/hq720.jpg`}
             alt={project.title}
-            className="object-cover w-full h-[235px] rounded-t-lg "
+            className="object-cover"
           />
 
           {/* Play Icon in Top Left */}

@@ -7,6 +7,9 @@ function FadeInSection(props) {
   const domRef = useRef();
 
   useEffect(() => {
+
+    console.log("use effexct called");
+    
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         // Set visibility based on intersection
